@@ -25,6 +25,134 @@
         </article>
     </main>
 
+    <section class="popup">
+        <div class="popup__top">
+            <h2 class="popup__title">Личные данные</h2>
+            <span class="popup__close" aria-label="Закрыть попап"></span>
+        </div>
+        <form class="data-form">
+            <h3 class="data-form__title">Факторы риска</h3>
+            <p class="data-form__highlighted">Эта информация поможет разработать для вас индивидуальный план регулярных обследований, подбирать акции и полезные статьи</p>
+
+            <div class="data-form__block">
+                <h4 class="data-form__block-title">Курение</h4>
+                <ul class="radiobuttons-list">
+                    <li>
+                        <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="nosmoking" value="nosmoking">
+                        <label class="radiobuttons-list__label" for="nosmoking">Не курю</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="smoking" value="smoking">
+                        <label class="radiobuttons-list__label" for="smoking">Курю</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="quit" value="quit">
+                        <label class="radiobuttons-list__label" for="quit">Бросил(а)</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="data-form__block">
+                <h4 class="data-form__block-title">Хронические заболевания</h4>
+                <input type="text" class="data-form__text-input" placeholder="Начните вводить название">
+                <ul class="tags-list">
+                    <li class="tags-list__item">Аллергия на анальгин 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Миопия 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Аллергия на анальгин 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Миопия 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Аллергия на анальгин 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Гайморит 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Аллергия на анальгин 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Миопия 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Аллергия на анальгин 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Миопия 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                    <li class="tags-list__item">Депрессия 
+                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="data-form__subtitle">Наследственность</h3>
+            <p class="data-form__marked">Какие из этих болезней были у ваших ближайших родственников (родителей, братьев, сестёр, бабушек, дедушек)? Это может влиять на вашу предрасположенность</p>
+
+            <div class="data-form__wrapper">
+                <div class="data-form__block data-form__block--column">
+                    <h4 class="data-form__block-title">Мужчины</h4>
+                    <ul class="checkbox-list">
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-1" value="checkbox-1">
+                            <label class="checkbox-list__label" for="checkbox-1">Диабет</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-2" value="checkbox-2" checked>
+                            <label class="checkbox-list__label" for="checkbox-2">Гипертония</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-3" value="checkbox-3">
+                            <label class="checkbox-list__label" for="checkbox-3">Рак простаты</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-4" value="checkbox-4">
+                            <label class="checkbox-list__label" for="checkbox-4">Рак толстого кишечника</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-5" value="checkbox-5">
+                            <label class="checkbox-list__label" for="checkbox-5">Меланома кожи</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="data-form__block data-form__block--column">
+                    <h4 class="data-form__block-title">Женщины</h4>
+                    <ul class="checkbox-list">
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-6" value="checkbox-6">
+                            <label class="checkbox-list__label" for="checkbox-6">Диабет</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-7" value="checkbox-7" checked>
+                            <label class="checkbox-list__label" for="checkbox-7">Гипертония</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-8" value="checkbox-8">
+                            <label class="checkbox-list__label" for="checkbox-8">Рак молочной железы</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-9" value="checkbox-9">
+                            <label class="checkbox-list__label" for="checkbox-9">Рак шейки матки</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-10" value="checkbox-10">
+                            <label class="checkbox-list__label" for="checkbox-10">Рак яичников</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="data-form__bottom">
+                <input type="submit" class="data-form__submit" value="Добавить">
+            </div>
+        </form>
+        
+    </section>
 </body>
 
 </html>

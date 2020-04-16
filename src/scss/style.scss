@@ -160,6 +160,6 @@ input[type="submit"] {
 .error {
   background-color: rgba(255, 0, 0, .4);
 }
-.hidden {
+.visually-hidden {
   @include hidden;
 }

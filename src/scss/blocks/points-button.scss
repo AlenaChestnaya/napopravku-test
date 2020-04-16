@@ -1,11 +1,5 @@
 .points-button {
-    background-color: #40B3B7;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 16px;
-    color: #FFFFFF;
-    border: none;
+    @include mint-button;
     display: flex;
     align-items: center;
     padding: 12px 16px;
