@@ -5,15 +5,3 @@
   height: 1px;
   margin: -1px;
 }
-
-@mixin maw($width) {
-  @media (max-width: $width) {
-    @content;
-  }
-}
-
-@mixin miw($width) {
-  @media (min-width: $width) {
-    @content;
-  }
-}

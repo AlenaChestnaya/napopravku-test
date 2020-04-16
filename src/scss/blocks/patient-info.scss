@@ -1,0 +1,10 @@
+.patient-info {
+    max-width: 846px;
+    margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+    .patient-info {
+        max-width: 100%;
+    }
+}
