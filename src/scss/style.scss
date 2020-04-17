@@ -5,6 +5,11 @@
 @import "blocks/info-block.scss";
 @import "blocks/points-button.scss";
 @import "blocks/patient-info.scss";
+@import "blocks/popup.scss";
+@import "blocks/data-form.scss";
+@import "blocks/radiobuttons-list.scss";
+@import "blocks/tags-list.scss";
+@import "blocks/checkbox-list.scss";
 
 @font-face {
   font-family: 'Montserrat';
@@ -162,4 +167,15 @@ input[type="submit"] {
 }
 .visually-hidden {
   @include hidden;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(27, 35, 74, .7);
+  cursor: pointer;
+  display: none;
 }

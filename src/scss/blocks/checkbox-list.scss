@@ -1,0 +1,32 @@
+.checkbox-list {
+    @include list-reset;
+}
+.checkbox-list__item {
+    display: flex;
+}
+.checkbox-list__label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 15px 5px 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        border-radius: 4px;
+        background-color: #F3F6FB;
+        border: 2px solid #A0A8C5;
+    }
+}
+.checkbox-list__input:checked + .checkbox-list__label::before {
+    border-color: $mint;
+    background: url(../img/checked.svg) center no-repeat;
+    background-color: $mint;
+}

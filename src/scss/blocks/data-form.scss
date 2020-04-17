@@ -1,0 +1,74 @@
+.data-form__body {
+    padding: 0 32px;
+}
+.data-form__title {
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 27px 0 16px;
+}
+.data-form__highlighted {
+    background: #FFF4CC;
+    border-radius: 4px;
+    padding: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.data-form__block-title {
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 24px 0 18px;
+
+    &--bottom {
+        margin: 26px 0 4px;
+    }
+}
+.data-form__text-input {
+    width: 100%;
+    border: 1px solid #A0A8C5;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 16px;
+
+    &::placeholder {
+        color: #A0A8C5;
+    }
+}
+.data-form__subtitle {
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 16px 0 8px;
+}
+.data-form__marked {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #A0A8C5;
+    margin-bottom: 16px;
+}
+.data-form__wrapper {
+    display: flex;
+}
+.data-form__block--column {
+    width: 50%;
+
+    .data-form__block-title {
+        margin: 0 0 13px;
+    }
+}
+.data-form__bottom {
+    padding: 32px;
+    border-top: 1px solid #DEE1ED;
+}
+.data-form__submit {
+    @include mint-button;
+    padding: 16px 41px;
+}

@@ -6,11 +6,18 @@
   margin: -1px;
 }
 @mixin mint-button {
-  background-color: #40B3B7;
+  display: block;
+  background-color: $mint;
   border-radius: 4px;
   font-weight: bold;
   font-size: 13px;
   line-height: 16px;
   color: #FFFFFF;
   border: none;
+  cursor: pointer;
+}
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

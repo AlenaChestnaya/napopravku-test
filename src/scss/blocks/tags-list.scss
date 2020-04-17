@@ -1,0 +1,28 @@
+.tags-list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tags-list__item {
+    display: flex;
+    align-items: center;
+    background: #DAFBF1;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $mint;
+    border-radius: 4px;
+    padding: 6px 9px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    cursor: default;
+}
+.tags-list__item-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+}

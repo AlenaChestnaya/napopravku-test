@@ -8,6 +8,14 @@
 </head>
 
 <body>
+    <svg style="display: none;">
+        <symbol id="close-popup" viewBox="0 0 14 14">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L8.41421 7L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L7 8.41421L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#1B234A"/>
+        </symbol>
+        <symbol id="close-tag" viewBox="0 0 8 8">
+                <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7"/>
+        </symbol>
+    </svg>
 
     <main>
         <article class="patient-info">
@@ -17,133 +25,182 @@
                 <h2 class="info-block__title">Заполните свой профиль и&nbsp;получите 100 баллов</h2>
                 <p class="info-block__text">Заполните базовую информацию о себе, чтобы мы могли подбирать для вас интересные акции и статьи. Информация о пациенте используется только для автозаполнения формы записи и не видна другим пользователям.</p>
                 <button class="info-block__button points-button">Перейти к заполнению 
-                    <div class="points-button__points"> 
-                        <img class="points-button__icon" src="img/point.svg" alt="">+100
-                    </div>
+                    <div class="points-button__points">+100</div>
                 </button>
             </div>
         </article>
     </main>
 
+    <div class="overlay"></div>
     <section class="popup">
         <div class="popup__top">
             <h2 class="popup__title">Личные данные</h2>
-            <span class="popup__close" aria-label="Закрыть попап"></span>
+            <span class="popup__close" aria-label="Закрыть попап">
+                    <svg width="14" height="14">
+                        <use xlink:href="#close-popup"></use>
+                    </svg>
+            </span>
         </div>
         <form class="data-form">
-            <h3 class="data-form__title">Факторы риска</h3>
-            <p class="data-form__highlighted">Эта информация поможет разработать для вас индивидуальный план регулярных обследований, подбирать акции и полезные статьи</p>
+            <div class="data-form__body">
+                <h3 class="data-form__title">Факторы риска</h3>
+                <p class="data-form__highlighted">Эта информация поможет разработать для вас индивидуальный план регулярных обследований, подбирать акции и полезные статьи</p>
 
-            <div class="data-form__block">
-                <h4 class="data-form__block-title">Курение</h4>
-                <ul class="radiobuttons-list">
-                    <li>
-                        <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="nosmoking" value="nosmoking">
-                        <label class="radiobuttons-list__label" for="nosmoking">Не курю</label>
-                    </li>
-                    <li>
-                        <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="smoking" value="smoking">
-                        <label class="radiobuttons-list__label" for="smoking">Курю</label>
-                    </li>
-                    <li>
-                        <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="quit" value="quit">
-                        <label class="radiobuttons-list__label" for="quit">Бросил(а)</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="data-form__block">
-                <h4 class="data-form__block-title">Хронические заболевания</h4>
-                <input type="text" class="data-form__text-input" placeholder="Начните вводить название">
-                <ul class="tags-list">
-                    <li class="tags-list__item">Аллергия на анальгин 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Миопия 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Аллергия на анальгин 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Миопия 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Аллергия на анальгин 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Гайморит 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Аллергия на анальгин 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Миопия 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Аллергия на анальгин 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Миопия 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                    <li class="tags-list__item">Депрессия 
-                        <span class="tags-list__item-close" aria-label="Удалить из списка"></span>
-                    </li>
-                </ul>
-            </div>
-
-            <h3 class="data-form__subtitle">Наследственность</h3>
-            <p class="data-form__marked">Какие из этих болезней были у ваших ближайших родственников (родителей, братьев, сестёр, бабушек, дедушек)? Это может влиять на вашу предрасположенность</p>
-
-            <div class="data-form__wrapper">
-                <div class="data-form__block data-form__block--column">
-                    <h4 class="data-form__block-title">Мужчины</h4>
-                    <ul class="checkbox-list">
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-1" value="checkbox-1">
-                            <label class="checkbox-list__label" for="checkbox-1">Диабет</label>
+                <div class="data-form__block">
+                    <h4 class="data-form__block-title">Курение</h4>
+                    <ul class="radiobuttons-list">
+                        <li class="radiobuttons-list__item">
+                            <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="nosmoking" value="nosmoking">
+                            <label class="radiobuttons-list__label" for="nosmoking">Не курю</label>
                         </li>
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-2" value="checkbox-2" checked>
-                            <label class="checkbox-list__label" for="checkbox-2">Гипертония</label>
+                        <li class="radiobuttons-list__item">
+                            <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="smoking" value="smoking">
+                            <label class="radiobuttons-list__label" for="smoking">Курю</label>
                         </li>
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-3" value="checkbox-3">
-                            <label class="checkbox-list__label" for="checkbox-3">Рак простаты</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-4" value="checkbox-4">
-                            <label class="checkbox-list__label" for="checkbox-4">Рак толстого кишечника</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-5" value="checkbox-5">
-                            <label class="checkbox-list__label" for="checkbox-5">Меланома кожи</label>
+                        <li class="radiobuttons-list__item">
+                            <input type="radio" class="visually-hidden radiobuttons-list__input" name="smoking" id="quit" value="quit">
+                            <label class="radiobuttons-list__label" for="quit">Бросил(а)</label>
                         </li>
                     </ul>
                 </div>
-                <div class="data-form__block data-form__block--column">
-                    <h4 class="data-form__block-title">Женщины</h4>
-                    <ul class="checkbox-list">
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-6" value="checkbox-6">
-                            <label class="checkbox-list__label" for="checkbox-6">Диабет</label>
+                <div class="data-form__block">
+                    <h4 class="data-form__block-title data-form__block-title--bottom">Хронические заболевания</h4>
+                    <input type="text" class="data-form__text-input" placeholder="Начните вводить название">
+                    <ul class="tags-list">
+                        <li class="tags-list__item">Аллергия на анальгин 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
                         </li>
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-7" value="checkbox-7" checked>
-                            <label class="checkbox-list__label" for="checkbox-7">Гипертония</label>
+                        <li class="tags-list__item">Миопия 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
                         </li>
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-8" value="checkbox-8">
-                            <label class="checkbox-list__label" for="checkbox-8">Рак молочной железы</label>
+                        <li class="tags-list__item">Аллергия на анальгин 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
                         </li>
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-9" value="checkbox-9">
-                            <label class="checkbox-list__label" for="checkbox-9">Рак шейки матки</label>
+                        <li class="tags-list__item">Миопия 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
                         </li>
-                        <li>
-                            <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-10" value="checkbox-10">
-                            <label class="checkbox-list__label" for="checkbox-10">Рак яичников</label>
+                        <li class="tags-list__item">Аллергия на анальгин 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tags-list__item">Гайморит 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tags-list__item">Аллергия на анальгин 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tags-list__item">Миопия 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tags-list__item">Аллергия на анальгин 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tags-list__item">Миопия 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tags-list__item">Депрессия 
+                            <span class="tags-list__item-close" aria-label="Удалить из списка">
+                                <svg width="8" height="8">
+                                    <use xlink:href="#close-tag"></use>
+                                </svg>
+                            </span>
                         </li>
                     </ul>
+                </div>
+
+                <h3 class="data-form__subtitle">Наследственность</h3>
+                <p class="data-form__marked">Какие из этих болезней были у ваших ближайших родственников (родителей, братьев, сестёр, бабушек, дедушек)? Это может влиять на вашу предрасположенность</p>
+
+                <div class="data-form__wrapper">
+                    <div class="data-form__block data-form__block--column">
+                        <h4 class="data-form__block-title">Мужчины</h4>
+                        <ul class="checkbox-list">
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-1" value="checkbox-1">
+                                <label class="checkbox-list__label" for="checkbox-1">Диабет</label>
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-2" value="checkbox-2" checked>
+                                <label class="checkbox-list__label" for="checkbox-2">Гипертония</label>
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-3" value="checkbox-3">
+                                <label class="checkbox-list__label" for="checkbox-3">Рак простаты</label>
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-4" value="checkbox-4">
+                                <label class="checkbox-list__label" for="checkbox-4">Рак толстого кишечника</label>
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-male" id="checkbox-5" value="checkbox-5">
+                                <label class="checkbox-list__label" for="checkbox-5">Меланома кожи</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data-form__block data-form__block--column">
+                        <h4 class="data-form__block-title">Женщины</h4>
+                        <ul class="checkbox-list">
+                                <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-6" value="checkbox-6">
+                                <label class="checkbox-list__label" for="checkbox-6">Диабет</label>
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-7" value="checkbox-7" checked>
+                                <label class="checkbox-list__label" for="checkbox-7">Гипертония</label>
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-8" value="checkbox-8">
+                                <label class="checkbox-list__label" for="checkbox-8">Рак молочной железы</label>
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-9" value="checkbox-9">
+                                <label class="checkbox-list__label" for="checkbox-9">Рак шейки матки</label>
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" class="visually-hidden checkbox-list__input" name="heredity-female" id="checkbox-10" value="checkbox-10">
+                                <label class="checkbox-list__label" for="checkbox-10">Рак яичников</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -151,7 +208,6 @@
                 <input type="submit" class="data-form__submit" value="Добавить">
             </div>
         </form>
-        
     </section>
 </body>
 
