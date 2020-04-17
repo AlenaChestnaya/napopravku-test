@@ -32,6 +32,16 @@
     cursor: pointer;
 }
 
+@media (max-width: $tablet-width) {
+    .popup {
+        width: auto;
+        left: 30px;
+        right: 30px;
+        top: 30px;
+        margin-left: 0;
+    }
+}
+
 @media (max-width: $mobile-width) {
     .popup {
         left: 0;

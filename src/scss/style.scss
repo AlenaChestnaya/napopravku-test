@@ -180,3 +180,10 @@ input[type="submit"] {
   // чтобы длины страницы хватало для высоты попапа
   bottom: -300px;
 }
+
+@media (max-width: $tablet-width) {
+  .overlay {
+    // чтобы длины страницы хватало для высоты попапа
+    bottom: -450px;
+  }
+}
