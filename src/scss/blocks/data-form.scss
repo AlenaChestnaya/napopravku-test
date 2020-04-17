@@ -72,3 +72,35 @@
     @include mint-button;
     padding: 16px 41px;
 }
+
+@media (max-width: $mobile-width) {
+    .data-form__title {
+        margin: 24px 0 16px;
+    }
+    .data-form__body {
+        padding: 0 16px;
+    }
+    .data-form__highlighted {
+        border-radius: 8px;
+    }
+    .data-form__wrapper {
+        flex-direction: column;
+    }
+    .data-form__block--column {
+        width: 100%;
+    
+        .data-form__block-title {
+            margin: 8px 0 13px;
+        }
+    }
+    .data-form__block--column + .data-form__block--column {
+        margin-top: 21px;
+    }
+    .data-form__bottom {
+        padding: 37px 16px 25px;
+        border-top: 0;
+    }
+    .data-form__submit {
+        width: 100%;
+    }
+}

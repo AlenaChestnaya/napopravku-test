@@ -177,5 +177,6 @@ input[type="submit"] {
   z-index: 2;
   background-color: rgba(27, 35, 74, .7);
   cursor: pointer;
-  display: none;
+  // чтобы длины страницы хватало для высоты попапа
+  bottom: -300px;
 }

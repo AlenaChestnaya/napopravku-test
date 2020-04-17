@@ -7,12 +7,15 @@
 }
 .radiobuttons-list__item {
     display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
 }
 .radiobuttons-list__label {
     display: flex;
     align-items: center;
     padding: 5px 15px 5px 0;
-    margin-bottom: 15px;
     cursor: pointer;
 
     &::before {
