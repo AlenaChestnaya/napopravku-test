@@ -169,7 +169,7 @@ input[type="submit"] {
   @include hidden;
 }
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -177,13 +177,4 @@ input[type="submit"] {
   z-index: 2;
   background-color: rgba(27, 35, 74, .7);
   cursor: pointer;
-  // чтобы длины страницы хватало для высоты попапа
-  bottom: -300px;
-}
-
-@media (max-width: $tablet-width) {
-  .overlay {
-    // чтобы длины страницы хватало для высоты попапа
-    bottom: -450px;
-  }
 }
