@@ -13,6 +13,8 @@ var mq = require('gulp-combine-mq');
 
 var vars = require('postcss-simple-vars');
 
+var del = require('del');
+
 var pathConfig = {
     srcPath: 'src',
     outPath: 'public'
@@ -99,9 +101,13 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest( params.outFont ));
 });
 
+gulp.task('clean', function() {
+    return del('public');
+  });
+
 gulp.task('default', ['css', 'server'], function () {
     gulp.watch("scss/*.scss", ['css']);
 });
 
 gulp.task('buildDev', ['html', 'js', 'img', 'fonts', 'css']);
-gulp.task('dev', ['default','server', 'buildDev']);
+gulp.task('dev', ['clean', 'default','server', 'buildDev']);
