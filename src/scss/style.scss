@@ -153,7 +153,11 @@ textarea {
 
 input[type="submit"] {
   border: none;
-  outline: none;
+}
+
+input[type="checkbox"]:focus + label,
+input[type="radio"]:focus + label {
+  outline: -webkit-focus-ring-color auto 1px;
 }
 
 .visually-hidden {
