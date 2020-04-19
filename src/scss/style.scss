@@ -158,6 +158,7 @@ input[type="submit"] {
 
 input[type="checkbox"]:focus + label,
 input[type="radio"]:focus + label {
+  outline: #4D90FE auto 1px;
   outline: -webkit-focus-ring-color auto 1px;
 }
 
