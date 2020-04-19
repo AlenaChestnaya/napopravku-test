@@ -1,5 +1,5 @@
 .data-form__body {
-    padding: 0 32px 19px;
+    padding: 0 32px 28px;
 }
 .data-form__title {
     text-align: left;
@@ -23,7 +23,7 @@
     margin: 24px 0 18px;
 
     &--bottom {
-        margin: 26px 0 4px;
+        margin: 21px 0 4px;
     }
 }
 .data-form__text-input {
@@ -58,10 +58,10 @@
     display: flex;
 }
 .data-form__block--column {
-    width: 50%;
+    width: 49%;
 
     .data-form__block-title {
-        margin: 0 0 13px;
+        margin: 0 0 18px;
     }
 }
 .data-form__bottom {
@@ -70,7 +70,7 @@
 }
 .data-form__submit {
     @include mint-button;
-    padding: 16px 41px;
+    padding: 16px 38px;
 }
 
 @media (max-width: $mobile-width) {
@@ -90,7 +90,7 @@
         width: 100%;
     
         .data-form__block-title {
-            margin: 8px 0 13px;
+            margin: 8px 0 18px;
         }
     }
     .data-form__block--column + .data-form__block--column {

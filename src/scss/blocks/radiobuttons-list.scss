@@ -1,12 +1,12 @@
 .radiobuttons-list {
     @include list-reset;
+}
+.radiobuttons-list__item {
+    display: flex;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: #18204A;
-}
-.radiobuttons-list__item {
-    display: flex;
 
     &:not(:last-child) {
         margin-bottom: 15px;
@@ -15,7 +15,7 @@
 .radiobuttons-list__label {
     display: flex;
     align-items: center;
-    padding: 5px 15px 5px 0;
+    padding: 0 15px 5px 0;
     cursor: pointer;
 
     &::before {
