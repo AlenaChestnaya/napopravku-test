@@ -23,7 +23,7 @@
     pointsButton.addEventListener('click', showPopup);
     сlose.addEventListener('click', closePopup);
     overlay.addEventListener('click', closePopup);
-    window.addEventListener("keydown", function (evt) {
+    window.addEventListener('keydown', function (evt) {
         if (evt.keyCode === ESC_CODE) {
             closePopup();
         }
