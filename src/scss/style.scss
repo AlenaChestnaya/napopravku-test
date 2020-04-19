@@ -103,6 +103,7 @@ a {
 a,
 button {
   cursor: pointer;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 
 p,
@@ -140,13 +141,6 @@ select{
   background: none;
 }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus{
-  outline: none;
-}
-
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
@@ -162,13 +156,11 @@ input[type="submit"] {
   outline: none;
 }
 
-.error {
-  background-color: rgba(255, 0, 0, .4);
-}
 .visually-hidden {
   @include hidden;
 }
 .overlay {
+  display: none;
   position: fixed;
   left: 0;
   right: 0;
@@ -177,4 +169,8 @@ input[type="submit"] {
   z-index: 2;
   background-color: rgba(27, 35, 74, .7);
   cursor: pointer;
+
+  &--show {
+    display: block;
+  }
 }
