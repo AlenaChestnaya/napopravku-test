@@ -31,7 +31,7 @@
     "postcss-animation": "0.0.6",
     "postcss-media-minmax": "^2.1.1",
     "postcss-short": "^1.4.0",
-    "postcss-svg": "^1.0.4",
+    "postcss-svg": "^3.0.0",
     "precss": "^1.3.0",
     "postcss-cssnext": "^2.5.1"
   }
